@@ -1,0 +1,232 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding:15px 0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00c6ff;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    color:white;
+    padding-top:80px;
+}
+
+/* Floating Code Animation */
+.floating-code span{
+    position:absolute;
+    color:rgba(255,255,255,0.1);
+    font-size:40px;
+    animation:float 10s linear infinite;
+}
+
+.floating-code span:nth-child(1){ top:10%; left:20%; animation-delay:0s;}
+.floating-code span:nth-child(2){ top:30%; left:70%; animation-delay:2s;}
+.floating-code span:nth-child(3){ top:60%; left:10%; animation-delay:4s;}
+.floating-code span:nth-child(4){ top:80%; left:50%; animation-delay:6s;}
+.floating-code span:nth-child(5){ top:40%; left:40%; animation-delay:8s;}
+.floating-code span:nth-child(6){ top:70%; left:80%; animation-delay:3s;}
+
+@keyframes float{
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-40px);}
+    100%{ transform:translateY(0);}
+}
+
+/* Glass Box */
+.glass{
+    background:rgba(255,255,255,0.1);
+    padding:50px;
+    border-radius:20px;
+    backdrop-filter: blur(15px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Gradient Text */
+.gradient-text{
+    font-size:40px;
+    font-weight:700;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:20px;
+}
+
+/* Buttons */
+.buttons{
+    margin-top:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    margin:10px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.primary{
+    background:#00c6ff;
+    color:white;
+}
+
+.primary:hover{
+    background:#0072ff;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.secondary:hover{
+    background:white;
+    color:#203a43;
+}
+
+/* Features Section */
+.features{
+    padding:80px 20px;
+    text-align:center;
+    background:#f4f4f4;
+}
+
+.features h2{
+    font-size:30px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Footer */
+.footer{
+    background:#111;
+    color:white;
+    padding:50px 20px 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.footer-box h3,
+.footer-box h4{
+    margin-bottom:15px;
+}
+
+.footer-box a{
+    display:block;
+    text-decoration:none;
+    color:#ccc;
+    margin-bottom:8px;
+}
+
+.footer-box a:hover{
+    color:#00c6ff;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:15px;
+    font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .gradient-text{
+        font-size:28px;
+    }
+
+    .glass{
+        padding:30px;
+    }
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    position: relative;
+}
+
+/* Center Logo */
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Keep links on right */
+.nav-links{
+    margin-left: auto;
+    display: flex;
+    gap: 40px;
+}
